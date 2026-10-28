@@ -17,6 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
+  <script>document.documentElement.classList.add("js")</script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -67,7 +68,7 @@
     <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="hero-kicker">O único rooftop de São Luís</p>
-        <h1 class="hero-title" id="hero-title">Viva São Luís do alto</h1>
+        <h1 class="hero-title" id="hero-title"><span>Viva São Luís</span> <span>do alto</span></h1>
         <p class="hero-lede">Gastronomia, piano e o pôr do sol sobre o Atlântico, no 12º andar da Avenida dos Holandeses.</p>
         <div class="hero-actions">
           <a class="btn btn-sun" href="#reservar">Reservar mesa</a>
@@ -90,8 +91,15 @@
       <p class="hero-sunset">Hoje o sol se põe às <b data-sunset>17:47</b>. Chegue meia hora antes.</p>
     </section>
 
+    <!-- ===================== FAIXA ===================== -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track" data-ticker>
+        <span>Peixada Maranhense</span><span>Pôr do sol às <b data-sunset>17:47</b></span><span>Piano ao vivo</span><span>Heliponto</span><span>Adega climatizada</span><span>Drinks da casa</span><span>Celebrações</span><span>12º andar</span>
+      </div>
+    </div>
+
     <!-- ===================== APRESENTAÇÃO ===================== -->
-    <section class="intro" aria-labelledby="intro-title">
+    <section class="intro" data-reveal aria-labelledby="intro-title">
       <h2 id="intro-title">Entre o Atlântico e a cidade</h2>
       <div class="intro-text">
         <p>O Miramar ocupa o topo do Edifício Marcus Barbosa Intelligent Office, no Calhau. As janelas de vidro abrem a vista do mar até a Raposa e, quando o sol vai embora, mostram São Luís acendendo lá embaixo.</p>
@@ -100,20 +108,43 @@
     </section>
 
     <!-- ===================== GALERIA ===================== -->
-    <section class="gallery" aria-label="Fotos do Miramar">
-      <figure><img src="/assets/fotos/casal-janela.jpg" alt="Casal olhando a cidade pela janela do rooftop" width="377" height="431" loading="lazy"><figcaption>Fim de tarde na janela</figcaption></figure>
-      <figure><img src="/assets/fotos/adega.jpg" alt="Adega de parede iluminada com garrafas de vinho" width="377" height="431" loading="lazy"><figcaption>A adega</figcaption></figure>
-      <figure><img src="/assets/fotos/frutos-do-mar.jpg" alt="Travessa de frutos do mar com polvo e camarões" width="377" height="431" loading="lazy"><figcaption>Do mar para a mesa</figcaption></figure>
-      <figure><img src="/assets/fotos/drink.jpg" alt="Drink de laranja com hortelã" width="377" height="431" loading="lazy"><figcaption>Drinks da casa</figcaption></figure>
-      <figure><img src="/assets/fotos/salao-flores.jpg" alt="Salão decorado com flores e luminárias de palha" width="377" height="431" loading="lazy"><figcaption>O salão</figcaption></figure>
-      <figure><img src="/assets/fotos/vinhos.jpg" alt="Garrafas de vinho sobre a mesa" width="377" height="431" loading="lazy"><figcaption>Rótulos para brindar</figcaption></figure>
-      <figure><img src="/assets/fotos/salao-entardecer.jpg" alt="Salão ao entardecer com vista para os prédios da orla" width="377" height="431" loading="lazy"><figcaption>Quando a cidade acende</figcaption></figure>
-      <figure><img src="/assets/fotos/salmao.jpg" alt="Prato de salmão com risoto" width="377" height="431" loading="lazy"><figcaption>Salmão e risoto</figcaption></figure>
+    <section class="gallery-wrap" aria-labelledby="gal-title">
+      <div class="gallery-head" data-reveal>
+        <h2 id="gal-title">Um dia no Miramar</h2>
+        <p>Toque numa foto para ver maior.</p>
+      </div>
+      <div class="gallery" data-gallery>
+        <button class="shot shot-wide" type="button" data-shot><img src="/assets/fotos/casal-janela.jpg" alt="Casal olhando a cidade pela janela do rooftop ao entardecer" width="380" height="434" loading="lazy"><span class="shot-cap">Fim de tarde na janela</span></button>
+        <button class="shot" type="button" data-shot><img src="/assets/fotos/adega.jpg" alt="Adega de parede iluminada com garrafas de vinho" width="379" height="432" loading="lazy"><span class="shot-cap">A adega</span></button>
+        <button class="shot" type="button" data-shot><img src="/assets/fotos/drink.jpg" alt="Drink de laranja com hortelã na mesa com vista" width="379" height="434" loading="lazy"><span class="shot-cap">Drinks da casa</span></button>
+
+        <button class="shot" type="button" data-shot><img src="/assets/fotos/salmao.jpg" alt="Prato de salmão com risoto" width="373" height="433" loading="lazy"><span class="shot-cap">Salmão e risoto</span></button>
+        <button class="shot" type="button" data-shot><img src="/assets/fotos/frutos-do-mar.jpg" alt="Travessa de frutos do mar com polvo e camarões" width="381" height="435" loading="lazy"><span class="shot-cap">Do mar para a mesa</span></button>
+        <button class="shot shot-wide" type="button" data-shot><img src="/assets/fotos/salao-flores.jpg" alt="Salão decorado com flores e luminárias de palha" width="379" height="434" loading="lazy"><span class="shot-cap">O salão</span></button>
+
+        <button class="shot shot-wide" type="button" data-shot><img src="/assets/fotos/salao-entardecer.jpg" alt="Salão ao entardecer com vista para os prédios da orla" width="373" height="457" loading="lazy"><span class="shot-cap">Quando a cidade acende</span></button>
+        <button class="shot" type="button" data-shot><img src="/assets/fotos/vinhos.jpg" alt="Garrafas de vinho sobre a mesa" width="380" height="433" loading="lazy"><span class="shot-cap">Rótulos para brindar</span></button>
+        <a class="shot shot-ig" href="https://www.instagram.com/miramarrooftop/" target="_blank" rel="noopener">
+          <span class="shot-ig-mark" aria-hidden="true"></span>
+          <span class="shot-ig-text">Mais momentos no Instagram</span>
+          <span class="shot-ig-handle">@miramarrooftop</span>
+        </a>
+      </div>
     </section>
+
+    <dialog class="lightbox" data-lightbox aria-label="Foto ampliada">
+      <figure class="lightbox-figure">
+        <img data-lb-img alt="">
+        <figcaption data-lb-cap></figcaption>
+      </figure>
+      <button class="lb-btn lb-close" type="button" data-lb-close aria-label="Fechar">×</button>
+      <button class="lb-btn lb-prev" type="button" data-lb-prev aria-label="Foto anterior">‹</button>
+      <button class="lb-btn lb-next" type="button" data-lb-next aria-label="Próxima foto">›</button>
+    </dialog>
 
     <!-- ===================== CARDÁPIO ===================== -->
     <section class="menu" id="cardapio" aria-labelledby="menu-title">
-      <div class="menu-head">
+      <div class="menu-head" data-reveal>
         <h2 id="menu-title">Cardápio</h2>
         <p>Cozinha contemporânea com pescados da costa maranhense. Os pratos com <span class="mar-inline" role="img" aria-label="onda"></span> levam sabores do Maranhão.</p>
       </div>
@@ -134,10 +165,10 @@
 
     <!-- ===================== CELEBRAÇÕES ===================== -->
     <section class="celebrate" id="celebracoes" aria-labelledby="cel-title">
-      <figure class="celebrate-photo">
+      <figure class="celebrate-photo" data-reveal>
         <img src="/assets/fotos/celebracao.jpg" alt="Mesa de bolo e doces decorada com flores e cortina de luzes no salão do Miramar" width="1048" height="956" loading="lazy">
       </figure>
-      <div class="celebrate-copy">
+      <div class="celebrate-copy" data-reveal>
         <h2 id="cel-title">Celebrações nas alturas</h2>
         <p class="celebrate-lede">O salão de vidro vira cenário para os dias que merecem vista.</p>
         <ul class="occasions">
@@ -162,25 +193,25 @@
 
     <!-- ===================== HELICÓPTERO ===================== -->
     <section class="heli" id="helicoptero" aria-labelledby="heli-title">
-      <div class="heli-copy">
+      <div class="heli-copy" data-reveal>
         <h2 id="heli-title">Antes do jantar, um voo sobre a ilha</h2>
         <p>Em parceria com a Via Táxi Aéreo, o Miramar oferece pacotes com voo de helicóptero sobre São Luís, antes ou depois da experiência no rooftop. É o roteiro preferido para datas especiais e pedidos de casamento.</p>
         <a class="btn btn-sun" href="#reservar" data-occasion="Voo de helicóptero">Quero saber dos pacotes</a>
       </div>
-      <figure class="heli-photo">
+      <figure class="heli-photo" data-reveal>
         <img src="/assets/fotos/pedido-casamento.jpg" alt="Mão com anel de noivado sobre buquê de rosas vermelhas" width="377" height="431" loading="lazy">
       </figure>
     </section>
 
     <!-- ===================== RESERVA ===================== -->
     <section class="book" id="reservar" aria-labelledby="book-title">
-      <div class="book-copy">
+      <div class="book-copy" data-reveal>
         <h2 id="book-title">Reserve sua mesa</h2>
         <p>Escolha o dia e o horário. A mensagem já sai pronta no WhatsApp da casa, e a equipe confirma por lá.</p>
         <p class="book-tip">Hoje o sol se põe às <b data-sunset>17:47</b>. Para pegar a luz dourada na janela, reserve para meia hora antes.</p>
       </div>
 
-      <form class="book-form" data-book novalidate>
+      <form class="book-form" data-reveal data-book novalidate>
         <div class="field">
           <label for="b-date">Dia</label>
           <input id="b-date" name="data" type="date" required>
@@ -225,7 +256,7 @@
 
     <!-- ===================== AVALIAÇÃO NO GOOGLE ===================== -->
     <section class="review" id="avaliar" aria-labelledby="rev-title">
-      <div class="postcard">
+      <div class="postcard" data-reveal>
         <div class="postcard-front">
           <p class="postcard-from">Um cartão-postal do 12º andar</p>
           <h2 id="rev-title">Conte como foi a sua vista</h2>
@@ -261,7 +292,7 @@
 
     <!-- ===================== VISITE ===================== -->
     <section class="where" id="onde" aria-labelledby="where-title">
-      <div class="where-copy">
+      <div class="where-copy" data-reveal>
         <h2 id="where-title">Visite o Miramar</h2>
         <address>
           Edifício Marcus Barbosa Intelligent Office, 12º andar<br>

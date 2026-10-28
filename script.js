@@ -50,6 +50,77 @@
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
+  /* ---------- Movimento ---------- */
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  requestAnimationFrame(() => requestAnimationFrame(() => document.documentElement.classList.add("is-loaded")));
+
+  // faixa: duplica o conteúdo para o loop não ter emenda
+  const track = $("[data-ticker]");
+  if (track && !reduce) track.innerHTML += track.innerHTML;
+
+  // janelas da abertura se movem em velocidades diferentes ao rolar
+  const wins = $$(".window");
+  if (!reduce && wins.length) {
+    let ticking = false;
+    const par = () => {
+      const y = Math.min(window.scrollY, 900);
+      wins.forEach((w, i) => w.style.setProperty("--py", `${(i === 1 ? -0.06 : 0.05) * y}px`));
+      ticking = false;
+    };
+    window.addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(par); } }, { passive: true });
+  }
+
+  // seções e fotos aparecem ao entrar na tela
+  const toReveal = $$("[data-reveal], .shot");
+  if ("IntersectionObserver" in window && !reduce) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => {
+        if (!en.isIntersecting) return;
+        const el = en.target;
+        const sibs = el.classList.contains("shot") ? $$(".shot") : [];
+        el.style.transitionDelay = sibs.length ? `${(sibs.indexOf(el) % 3) * 90}ms` : "";
+        el.classList.add("is-in");
+        io.unobserve(el);
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+    toReveal.forEach((el) => io.observe(el));
+  } else toReveal.forEach((el) => el.classList.add("is-in"));
+
+  /* ---------- Galeria: foto ampliada ---------- */
+  const lb = $("[data-lightbox]");
+  const shots = $$("[data-shot]");
+  const lbImg = $("[data-lb-img]");
+  const lbCap = $("[data-lb-cap]");
+  let cur = 0;
+  function show(i) {
+    cur = (i + shots.length) % shots.length;
+    const img = $("img", shots[cur]);
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lbCap.textContent = $(".shot-cap", shots[cur]).textContent;
+  }
+  shots.forEach((s, i) => s.addEventListener("click", () => {
+    show(i);
+    if (lb.showModal) lb.showModal(); else lb.setAttribute("open", "");
+  }));
+  const closeLb = () => (lb.close ? lb.close() : lb.removeAttribute("open"));
+  $("[data-lb-close]").addEventListener("click", closeLb);
+  $("[data-lb-prev]").addEventListener("click", () => show(cur - 1));
+  $("[data-lb-next]").addEventListener("click", () => show(cur + 1));
+  lb.addEventListener("click", (e) => { if (e.target === lb || e.target.classList.contains("lightbox-figure")) closeLb(); });
+  lb.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight") show(cur + 1);
+    if (e.key === "ArrowLeft") show(cur - 1);
+  });
+  let sx = null;
+  lbImg.addEventListener("touchstart", (e) => { sx = e.touches[0].clientX; }, { passive: true });
+  lbImg.addEventListener("touchend", (e) => {
+    if (sx === null) return;
+    const dx = e.changedTouches[0].clientX - sx;
+    if (Math.abs(dx) > 40) show(cur + (dx < 0 ? 1 : -1));
+    sx = null;
+  });
+
   /* ---------- Cardápio ---------- */
   const MENU = window.MIRAMAR_MENU || [];
   const list = $("[data-menu-list]");
