@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Miramar Rooftop · Gastronomia e eventos no alto de São Luís</title>
+  <meta name="description" content="O único rooftop de São Luís. Gastronomia, piano, pôr do sol sobre o Atlântico, celebrações e voos de helicóptero no topo do Edifício Marcus Barbosa, Av. dos Holandeses, Calhau.">
+  <meta name="theme-color" content="#0F1B3D">
+  <meta property="og:title" content="Miramar Rooftop · Viva São Luís do alto">
+  <meta property="og:description" content="Gastronomia, piano e o pôr do sol sobre o Atlântico, no único rooftop de São Luís.">
+  <meta property="og:image" content="/assets/og.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Miramar Rooftop",
+    "slogan": "Viva São Luís do alto!",
+    "servesCuisine": ["Brasileira", "Frutos do mar", "Contemporânea"],
+    "telephone": "+55 98 98414-2570",
+    "email": "rooftopmiramar@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. dos Holandeses, 6916 - Calhau, Edifício Marcus Barbosa Intelligent Office",
+      "addressLocality": "São Luís",
+      "addressRegion": "MA",
+      "addressCountry": "BR"
+    },
+    "acceptsReservations": "True",
+    "sameAs": ["https://www.instagram.com/miramarrooftop/"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="top" data-top>
+    <a class="top-logo" href="#inicio" aria-label="Miramar Rooftop, início">
+      <img src="/assets/logo-miramar-branco.png" alt="" width="560" height="397">
+    </a>
+    <nav class="top-nav" aria-label="Seções">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#celebracoes">Celebrações</a>
+      <a href="#helicoptero">Helicóptero</a>
+      <a href="#onde">Onde estamos</a>
+    </nav>
+    <a class="btn btn-sun btn-sm" href="#reservar">Reservar mesa</a>
+  </header>
+
+  <main id="conteudo">
+    <!-- ===================== HERO: o céu de São Luís agora ===================== -->
+    <section class="sky" id="inicio" data-sky aria-labelledby="hero-title">
+      <div class="sky-stars" aria-hidden="true"></div>
+
+      <svg class="sky-scene" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <defs>
+          <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#FFE3A8" stop-opacity=".9"/>
+            <stop offset=".35" stop-color="#F29A35" stop-opacity=".35"/>
+            <stop offset="1" stop-color="#F29A35" stop-opacity="0"/>
+          </radialGradient>
+          <mask id="moonMask"><circle r="34" fill="#fff"/><circle r="34" cx="14" cy="-8" fill="#000"/></mask>
+          <clipPath id="aboveSea"><rect x="0" y="0" width="1600" height="700"/></clipPath>
+        </defs>
+
+        <!-- trajetória do sol -->
+        <path class="sky-arc" d="M 120 700 A 680 520 0 0 1 1480 700"/>
+
+        <!-- sol (raios inspirados no logotipo) -->
+        <g clip-path="url(#aboveSea)">
+          <g class="sun" data-sun transform="translate(800 260)">
+            <circle r="210" fill="url(#sunGlow)"/>
+            <g class="sun-rays">
+              <line x1="0" y1="-78" x2="0" y2="-112"/>
+              <line x1="0" y1="-78" x2="0" y2="-112" transform="rotate(30)"/>
+              <line x1="0" y1="-78" x2="0" y2="-112" transform="rotate(60)"/>
+              <line x1="0" y1="-78" x2="0" y2="-112" transform="rotate(90)"/>
+              <line x1="0" y1="-78" x2="0" y2="-112" transform="rotate(120)"/>
+              <line x1="0" y1="-78" x2="0" y2="-112" transform="rotate(150)"/>
+              <line x1="0" y1="-78" x2="0" y2="-112" transform="rotate(180)"/>
+              <line x1="0" y1="-78" x2="0" y2="-112" transform="rotate(210)"/>
+              <line x1="0" y1="-78" x2="0" y2="-112" transform="rotate(240)"/>
+              <line x1="0" y1="-78" x2="0" y2="-112" transform="rotate(270)"/>
+              <line x1="0" y1="-78" x2="0" y2="-112" transform="rotate(300)"/>
+              <line x1="0" y1="-78" x2="0" y2="-112" transform="rotate(330)"/>
+            </g>
+            <circle class="sun-disc" r="58"/>
+          </g>
+          <g class="moon" data-moon transform="translate(1200 220)">
+            <circle r="34" class="moon-disc" mask="url(#moonMask)"/>
+          </g>
+        </g>
+
+        <!-- skyline da Av. dos Holandeses -->
+        <g class="skyline">
+          <rect x="1010" y="560" width="46" height="140"/>
+          <rect x="1062" y="600" width="34" height="100"/>
+          <rect x="1102" y="520" width="58" height="180"/>
+          <rect x="1166" y="585" width="40" height="115"/>
+          <rect x="1212" y="545" width="52" height="155"/>
+          <rect x="1270" y="610" width="36" height="90"/>
+          <rect x="1312" y="575" width="44" height="125"/>
+          <rect x="1362" y="625" width="30" height="75"/>
+          <rect x="1398" y="595" width="48" height="105"/>
+          <rect x="1452" y="640" width="40" height="60"/>
+          <rect x="1498" y="605" width="54" height="95"/>
+          <rect x="1558" y="630" width="42" height="70"/>
+          <g class="windows">
+            <rect x="1114" y="540" width="6" height="8"/><rect x="1130" y="540" width="6" height="8"/><rect x="1146" y="540" width="6" height="8"/>
+            <rect x="1114" y="570" width="6" height="8"/><rect x="1146" y="570" width="6" height="8"/>
+            <rect x="1114" y="600" width="6" height="8"/><rect x="1130" y="600" width="6" height="8"/>
+            <rect x="1224" y="565" width="6" height="8"/><rect x="1244" y="565" width="6" height="8"/>
+            <rect x="1224" y="600" width="6" height="8"/><rect x="1244" y="630" width="6" height="8"/>
+            <rect x="1020" y="580" width="6" height="8"/><rect x="1036" y="610" width="6" height="8"/>
+            <rect x="1322" y="595" width="6" height="8"/><rect x="1338" y="625" width="6" height="8"/>
+            <rect x="1410" y="615" width="6" height="8"/><rect x="1428" y="645" width="6" height="8"/>
+            <rect x="1510" y="625" width="6" height="8"/><rect x="1530" y="655" width="6" height="8"/>
+          </g>
+        </g>
+
+        <!-- mar (ondas do logotipo) -->
+        <rect class="sea" x="0" y="700" width="1600" height="200"/>
+        <path class="sun-path-sea" data-glint d="M 760 712 h 80 M 740 735 h 120 M 770 760 h 60 M 720 790 h 160"/>
+        <path class="wave wave-1" d="M0 728 C 120 708 220 748 340 728 S 560 708 680 728 S 900 748 1020 728 S 1240 708 1360 728 S 1520 748 1600 728"/>
+        <path class="wave wave-2" d="M0 780 C 140 756 260 804 400 780 S 660 756 800 780 S 1060 804 1200 780 S 1460 756 1600 780"/>
+        <path class="wave wave-3" d="M0 840 C 160 812 300 868 460 840 S 760 812 920 840 S 1220 868 1380 840 S 1540 828 1600 836"/>
+      </svg>
+
+      <div class="sky-copy">
+        <p class="sky-kicker">O único rooftop de São Luís</p>
+        <h1 class="sky-title" id="hero-title">Viva São Luís do alto.</h1>
+        <p class="sky-now" data-now aria-live="polite">Agora em São Luís são <b data-clock>--:--</b>. O sol se põe às <b data-sunset>--:--</b>.</p>
+        <div class="sky-actions">
+          <a class="btn btn-sun" href="#reservar">Reservar mesa</a>
+          <a class="btn btn-glass" href="#cardapio">Ver o cardápio</a>
+        </div>
+      </div>
+
+      <div class="dial" data-dial>
+        <div class="dial-moment">
+          <p class="dial-name" data-moment-name>Pôr do sol</p>
+          <p class="dial-text" data-moment-text>O momento mais disputado da casa. Peça mesa na janela.</p>
+        </div>
+        <div class="dial-control">
+          <label class="dial-label" for="dial-range">Arraste para ver o céu do rooftop em outra hora</label>
+          <div class="dial-row">
+            <span class="dial-time" data-dial-time>--:--</span>
+            <input id="dial-range" class="dial-range" type="range" min="0" max="1439" step="5" value="720" data-dial-range>
+            <button class="dial-now" type="button" data-dial-now hidden>Voltar para agora</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== APRESENTAÇÃO ===================== -->
+    <section class="intro" aria-labelledby="intro-title">
+      <div class="intro-copy">
+        <h2 id="intro-title">Uma janela de vidro entre o Atlântico e a cidade.</h2>
+        <p>O Miramar fica no topo do Edifício Marcus Barbosa Intelligent Office, na Avenida dos Holandeses. De um lado, o mar do Calhau. Do outro, São Luís se acendendo quando o sol vai embora.</p>
+        <p>Nasceu da história do Grupo Jeová Barbosa Engenharia, que constrói em São Luís desde 1999, e hoje reúne cozinha contemporânea, sabores do Maranhão, adega climatizada e piano.</p>
+      </div>
+      <figure class="intro-figure intro-figure-a">
+        <img src="/assets/fotos/salao-por-do-sol.jpg" alt="Salão do Miramar com mesas postas e o pôr do sol nas janelas" width="381" height="462" loading="lazy">
+      </figure>
+      <figure class="intro-figure intro-figure-b">
+        <img src="/assets/fotos/avenida-dos-holandeses.jpg" alt="Vista do alto da Avenida dos Holandeses ao entardecer" width="381" height="462" loading="lazy">
+        <figcaption>Av. dos Holandeses, vista do rooftop</figcaption>
+      </figure>
+    </section>
+
+    <!-- ===================== GALERIA ===================== -->
+    <section class="reel" aria-label="Fotos do Miramar">
+      <div class="reel-track" tabindex="0" aria-label="Galeria, role para o lado">
+        <figure><img src="/assets/fotos/mesa-vista-mar.jpg" alt="Prato de frutos do mar e taça de espumante com o mar ao fundo" width="381" height="462" loading="lazy"><figcaption>Almoço com o mar ao fundo</figcaption></figure>
+        <figure><img src="/assets/fotos/adega.jpg" alt="Adega de parede iluminada com garrafas de vinho" width="381" height="462" loading="lazy"><figcaption>A adega</figcaption></figure>
+        <figure><img src="/assets/fotos/casal-janela.jpg" alt="Casal de costas olhando a cidade pela janela do rooftop" width="381" height="462" loading="lazy"><figcaption>Fim de tarde na janela</figcaption></figure>
+        <figure><img src="/assets/fotos/drink.jpg" alt="Drink de laranja com hortelã sobre a mesa" width="381" height="462" loading="lazy"><figcaption>Drinks autorais</figcaption></figure>
+        <figure><img src="/assets/fotos/salao-flores.jpg" alt="Salão do Miramar decorado com flores e luminárias de palha" width="381" height="462" loading="lazy"><figcaption>O salão</figcaption></figure>
+        <figure><img src="/assets/fotos/frutos-do-mar.jpg" alt="Travessa de frutos do mar com polvo e camarões" width="381" height="462" loading="lazy"><figcaption>Do mar para a mesa</figcaption></figure>
+        <figure><img src="/assets/fotos/salao-entardecer.jpg" alt="Salão ao entardecer com vista para os prédios da orla" width="381" height="462" loading="lazy"><figcaption>Quando a cidade acende</figcaption></figure>
+        <figure><img src="/assets/fotos/vinhos.jpg" alt="Garrafas de vinho sobre a mesa" width="381" height="462" loading="lazy"><figcaption>Rótulos para brindar</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ===================== CARDÁPIO ===================== -->
+    <section class="menu" id="cardapio" aria-labelledby="menu-title">
+      <div class="menu-head">
+        <h2 id="menu-title">Cardápio</h2>
+        <p>Cozinha contemporânea com pescados da costa maranhense. Os pratos marcados com a onda levam sabores do Maranhão.</p>
+      </div>
+
+      <div class="menu-tools">
+        <div class="menu-tabs" role="group" aria-label="Filtrar o cardápio" data-menu-tabs></div>
+        <label class="menu-search">
+          <span class="sr">Buscar no cardápio</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4.2-4.2"/></svg>
+          <input type="search" placeholder="Buscar prato, ingrediente…" data-menu-search autocomplete="off">
+        </label>
+      </div>
+
+      <div class="menu-body">
+        <div class="menu-list" data-menu-list aria-live="polite"></div>
+        <aside class="menu-aside" aria-hidden="true">
+          <img src="/assets/fotos/salmao.jpg" alt="" width="381" height="462" loading="lazy">
+        </aside>
+      </div>
+
+      <p class="fine">Preços do cardápio publicado pela casa, sujeitos a alteração. Peixada Maranhense tem preparo artesanal de cerca de 50 minutos.</p>
+    </section>
+
+    <!-- ===================== CELEBRAÇÕES ===================== -->
+    <section class="celebrate" id="celebracoes" aria-labelledby="cel-title">
+      <figure class="celebrate-photo">
+        <img src="/assets/fotos/celebracao.jpg" alt="Mesa de bolo e doces decorada com flores e cortina de luzes no salão do Miramar" width="1048" height="956" loading="lazy">
+      </figure>
+      <div class="celebrate-copy">
+        <h2 id="cel-title">Celebrações nas alturas</h2>
+        <p class="celebrate-lede">O salão de vidro vira cenário para os dias que merecem vista.</p>
+        <ul class="occasions">
+          <li>
+            <h3>Casamentos</h3>
+            <p>Cerimônia e recepção com vista panorâmica, do pôr do sol às luzes da cidade.</p>
+            <a href="#reservar" data-occasion="Casamento">Planejar casamento</a>
+          </li>
+          <li>
+            <h3>Aniversários</h3>
+            <p>Encontros com gastronomia contemporânea e São Luís inteira de fundo.</p>
+            <a href="#reservar" data-occasion="Aniversário">Planejar aniversário</a>
+          </li>
+          <li>
+            <h3>Eventos corporativos</h3>
+            <p>Reuniões, lançamentos e confraternizações com infraestrutura completa.</p>
+            <a href="#reservar" data-occasion="Evento corporativo">Planejar evento</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== HELICÓPTERO ===================== -->
+    <section class="heli" id="helicoptero" aria-labelledby="heli-title">
+      <svg class="heli-pad" viewBox="0 0 400 400" aria-hidden="true">
+        <circle cx="200" cy="200" r="180" class="pad-ring"/>
+        <circle cx="200" cy="200" r="150" class="pad-ring pad-ring-thin"/>
+        <path class="pad-h" d="M150 120 v160 M250 120 v160 M150 200 h100"/>
+      </svg>
+      <div class="heli-copy">
+        <h2 id="heli-title">Antes do jantar, um voo sobre a ilha.</h2>
+        <p>Em parceria com a Via Táxi Aéreo, o Miramar oferece pacotes com voo de helicóptero sobre São Luís, antes ou depois da experiência no rooftop. É o roteiro preferido para datas especiais e pedidos de casamento.</p>
+        <a class="btn btn-sun" href="#reservar" data-occasion="Voo de helicóptero">Quero saber dos pacotes</a>
+      </div>
+      <figure class="heli-photo">
+        <img src="/assets/fotos/pedido-casamento.jpg" alt="Mão com anel de noivado sobre buquê de rosas vermelhas" width="381" height="462" loading="lazy">
+      </figure>
+    </section>
+
+    <!-- ===================== RESERVA ===================== -->
+    <section class="book" id="reservar" aria-labelledby="book-title">
+      <div class="book-copy">
+        <h2 id="book-title">Reserve sua mesa</h2>
+        <p>Escolha o dia e o horário. A mensagem já sai pronta no WhatsApp da casa, e a equipe confirma por lá.</p>
+        <p class="book-tip" data-book-tip>Dica: o sol se põe por volta das <b data-sunset>--:--</b>. Chegue meia hora antes para pegar a luz dourada.</p>
+      </div>
+
+      <form class="book-form" data-book novalidate>
+        <div class="field">
+          <label for="b-date">Dia</label>
+          <input id="b-date" name="data" type="date" required>
+        </div>
+        <div class="field">
+          <label for="b-time">Horário</label>
+          <input id="b-time" name="hora" type="time" value="19:30" required>
+        </div>
+        <fieldset class="field field-people">
+          <legend>Pessoas</legend>
+          <div class="stepper">
+            <button type="button" data-step="-1" aria-label="Menos uma pessoa">−</button>
+            <output name="pessoas" data-people aria-live="polite">2</output>
+            <button type="button" data-step="1" aria-label="Mais uma pessoa">+</button>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="b-occasion">Ocasião</label>
+          <select id="b-occasion" name="ocasiao" data-occasion-select>
+            <option>Jantar</option>
+            <option>Almoço</option>
+            <option>Aniversário</option>
+            <option>Pedido de casamento</option>
+            <option>Casamento</option>
+            <option>Evento corporativo</option>
+            <option>Voo de helicóptero</option>
+          </select>
+        </div>
+        <div class="field field-wide">
+          <label for="b-name">Seu nome</label>
+          <input id="b-name" name="nome" type="text" autocomplete="name" placeholder="Como devemos chamar você?" required>
+        </div>
+        <label class="check field-wide">
+          <input type="checkbox" name="janela" checked>
+          <span>Prefiro mesa perto da janela</span>
+        </label>
+        <p class="form-error field-wide" data-form-error hidden></p>
+        <button class="btn btn-sun btn-block field-wide" type="submit">Enviar pedido de reserva pelo WhatsApp</button>
+      </form>
+    </section>
+
+    <!-- ===================== ONDE ===================== -->
+    <section class="where" id="onde" aria-labelledby="where-title">
+      <div class="where-copy">
+        <h2 id="where-title">No topo da Av. dos Holandeses</h2>
+        <address>
+          Edifício Marcus Barbosa Intelligent Office<br>
+          Av. dos Holandeses, 6916, Calhau<br>
+          São Luís, MA
+        </address>
+        <ul class="where-list">
+          <li><a href="https://wa.me/5598984142570" target="_blank" rel="noopener">WhatsApp (98) 98414-2570</a></li>
+          <li><a href="mailto:rooftopmiramar@gmail.com">rooftopmiramar@gmail.com</a></li>
+          <li><a href="https://www.instagram.com/miramarrooftop/" target="_blank" rel="noopener">@miramarrooftop</a>, com horários, menu executivo e agenda de eventos nos destaques</li>
+        </ul>
+        <a class="btn btn-ink" href="https://www.google.com/maps/search/?api=1&query=Edif%C3%ADcio+Marcus+Barbosa+Intelligent+Office+Av.+dos+Holandeses+6916+S%C3%A3o+Lu%C3%ADs" target="_blank" rel="noopener">Como chegar</a>
+      </div>
+      <div class="where-map">
+        <iframe title="Mapa do Miramar Rooftop em São Luís" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Av.%20dos%20Holandeses%2C%206916%2C%20Calhau%2C%20S%C3%A3o%20Lu%C3%ADs%20-%20MA&output=embed"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="tiles" aria-hidden="true"></div>
+    <div class="foot-inner">
+      <img src="/assets/logo-miramar-branco.png" alt="Miramar Rooftop, gastronomia" width="560" height="397" class="foot-logo" loading="lazy">
+      <p class="foot-line">Gastronomia, piano e celebrações no alto de São Luís.</p>
+      <nav class="foot-links" aria-label="Redes e contato">
+        <a href="https://www.instagram.com/miramarrooftop/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/5598984142570" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:rooftopmiramar@gmail.com">E-mail</a>
+      </nav>
+      <p class="foot-legal">© <span data-year>2026</span> Miramar Rooftop. Beba com moderação.</p>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/5598984142570?text=Ol%C3%A1!%20Vim%20pelo%20site%20do%20Miramar." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-2c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3Zm0 23.4c-2.1 0-4.1-.6-5.9-1.7l-.4-.2-3.8 1.2 1.2-3.7-.3-.4a10.5 10.5 0 0 1-1.7-5.8C5.1 9.9 10 5.2 16 5.2s10.9 4.7 10.9 10.6S22 26.4 16 26.4Zm6-7.9c-.3-.2-1.9-1-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.7c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.6.7.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4Z"/></svg>
+  </a>
+
+  <script src="/menu-data.js" defer></script>
+  <script src="/script.js" defer></script>
+</body>
+</html>
